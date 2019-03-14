@@ -14,6 +14,9 @@ class Car(models.Model):
 
     def get_absolute_url(self):
         return reverse('car-details', kwargs={'pk': self.pk})
+    
+    def __str__(self):
+        return self.name
 
 
 class Booking(models.Model):
